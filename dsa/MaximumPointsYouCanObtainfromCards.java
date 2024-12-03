@@ -14,7 +14,7 @@ public class MaximumPointsYouCanObtainfromCards {
 
         for (int i = 0; i < k; i++) leftSum += cardPoints[i];
 
-        int maxSum = 0;
+        int maxSum = leftSum;
 
         int rightIndex = len - 1;
 
