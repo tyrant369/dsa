@@ -1,5 +1,6 @@
 
 
+
 public class LongestSubstringWithAtMostKDistinctCharacters {
 
     public static int findLongestAtDisK(String s, int k){
