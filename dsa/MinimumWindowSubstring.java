@@ -42,9 +42,6 @@ public class MinimumWindowSubstring {
                 left++;
             }
 
-
-
-
             right++;
         }
 
