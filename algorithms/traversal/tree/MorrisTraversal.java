@@ -4,9 +4,6 @@ package Tree.Traversal;
  * #LeetCode 94 |  https://leetcode.com/problems/binary-tree-inorder-traversal/solutions/31381/Python-recursive-and-iterative-solutions./
  */
 
-import java.util.ArrayList;
-import java.util.List;
-
 class TreeNode {
       int val;
       TreeNode left;
@@ -54,9 +51,8 @@ public class MorrisTraversal {
             }
         }
 
-
         return inorder;
     }
 }
-}
+
 
