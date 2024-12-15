@@ -2,6 +2,9 @@
  *  https://www.geeksforgeeks.org/problems/implementing-dijkstra-set-1-adjacency-matrix/1?utm_source=youtube&utm_medium=collab_striver_ytdescription&utm_campaign=implementing-dijkstra-set-1-adjacency-matrix
  */
 
+
+// BASICALLY USED FOR GET SHORTESPATH FROM SINGLE SOURCE
+
 public class Dijkstra {
 
     // Represents a node and its associated distance

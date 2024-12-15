@@ -1,0 +1,43 @@
+# what is the benifits of floyd warshall upon dikstra algoritm for finding shortest path from all nodes as both has n cube time complexity?
+
+Ans :-
+        The Floyd-Warshall algorithm and Dijkstra’s algorithm are both used for finding shortest paths in graphs, but they are
+        designed for slightly different purposes and have distinct advantages and limitations. Here's a comparison to explain the
+        benefits of Floyd-Warshall over Dijkstra in specific scenarios:
+
+        1. Nature of the Problem: Single Source vs. All-Pairs
+        - Dijkstra’s Algorithm: Best suited for finding the shortest paths from a single source node to all other nodes in a graph.
+        If you need to compute all-pairs shortest paths, you would have to run Dijkstra's algorithm from every node, leading to
+        O(V^3 + E * V) in a dense graph where E = V^2.
+        - Floyd-Warshall Algorithm: Explicitly designed to compute all-pairs shortest paths in O(V^3). This makes it more
+        straightforward and efficient for all-pairs calculations in dense graphs.
+
+        2. Simplicity in Implementation
+        - Floyd-Warshall: The algorithm is easy to implement using a simple dynamic programming approach with just a single matrix for
+        distances. This simplicity can make it easier to debug and maintain.
+        - Dijkstra’s Algorithm: Requires additional structures like priority queues for optimal performance, especially in sparse graphs.
+        Running it multiple times for all-pairs shortest paths adds complexity.
+
+        3. Handling Negative Weights
+        - Floyd-Warshall: Can handle graphs with negative edge weights (but no negative weight cycles) naturally. If there’s a negative
+         cycle, it can detect it during execution.
+        - Dijkstra’s Algorithm: Does not work with negative edge weights, as it assumes that adding an edge to a path always increases
+         its total cost.
+
+        4. Space Complexity
+        - Floyd-Warshall: Requires O(V^2) space to store the distance matrix.
+        - Dijkstra’s Algorithm: Typically requires O(V + E) for storing adjacency lists and O(V) for priority queues, but running it
+        V times for all-pairs can significantly increase the memory requirements in dense graphs.
+
+        5. Practical Use Cases
+        - Floyd-Warshall: Ideal for smaller, dense graphs where all-pairs shortest paths are needed, or when the graph has negative weights.
+        - Dijkstra’s Algorithm: Better suited for large, sparse graphs when single-source shortest paths are needed or in combination
+        with specific graph structures (e.g., Fibonacci heaps for faster execution in sparse graphs).
+
+        When to Prefer Floyd-Warshall Over Dijkstra?
+        - All-Pairs Shortest Path: Floyd-Warshall is inherently more efficient and simpler when you need all-pairs shortest paths.
+        - Negative Weights: Floyd-Warshall is the go-to when the graph has negative edge weights.
+        - Small, Dense Graphs: For graphs where V^2 ≈ E, Floyd-Warshall is straightforward and practical.
+
+        In summary, while both algorithms have O(V^3) complexity for dense graphs, Floyd-Warshall’s simplicity, ability to handle negative
+        weights, and direct suitability for all-pairs shortest paths make it advantageous over Dijkstra in many situations.
