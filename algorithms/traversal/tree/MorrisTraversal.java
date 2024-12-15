@@ -1,4 +1,3 @@
-package Tree.Traversal;
 
 /**
  * #LeetCode 94 |  https://leetcode.com/problems/binary-tree-inorder-traversal/solutions/31381/Python-recursive-and-iterative-solutions./
