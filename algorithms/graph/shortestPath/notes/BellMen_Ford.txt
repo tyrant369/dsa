@@ -1,0 +1,25 @@
+1. why we use n - 1 interartions?
+
+ans:-
+           Since in a graph of N nodes, in worst case, you will
+           take N-1 edges to reach from the first to the last,
+           thereby we iterate for N-1 iterations.
+           Try drawing a graph which takes more than N-1 edges
+           for any path, it is not possible.
+
+2. How to detect a negative cycle in the graph?
+
+ans:-
+            We know if we keep on rotating inside a negative cycle,
+            the path weight will be decreased in every iteration. But
+            according to our intuition, we should have minimized all
+            distances within N-1 iterations(that means, after N-1
+            iterations no relaxation of edges is possible).
+            In order to check the existence of a negative cycle,
+            we will relax the edges one more time after the completion of
+            N-1 iterations. And if in that Nth iteration, it is found that
+            further relaxation of any edge is possible, we can conclude that the
+            graph has a negative cycle. Thus, the Bellman-Ford algorithm detects
+            negative cycles.
+
+
